@@ -19,6 +19,10 @@ public  class EatAndHealCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
+        /**
+         Implementing Eat command below;
+         */
+
         Player player = (Player) sender;
         if (label.equalsIgnoreCase("eat")) {
             if (!(sender instanceof Player)) {
@@ -32,6 +36,9 @@ public  class EatAndHealCommand implements CommandExecutor {
             return true;
 
         }
+        /**
+         Implementing Heal command below;
+         */
         if (label.equalsIgnoreCase("heal")) {
             if (!(sender instanceof Player)) {
                 sender.sendMessage("Only players may use this command");
@@ -42,6 +49,10 @@ public  class EatAndHealCommand implements CommandExecutor {
             player.setHealth(20.0);
             player.sendMessage("You have been healed");
         }
+
+        /**
+         Implementing God command below; God command listener can be found in GodListener file
+         */
         if (label.equalsIgnoreCase("god")) {
             if (!(sender instanceof Player)) {
                 sender.sendMessage("Only players may use this command");

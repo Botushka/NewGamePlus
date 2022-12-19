@@ -20,6 +20,9 @@ public class ToolAbilities implements Listener{
         PotionEffect strenght = new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 100, 0);
         PotionEffect Speed = new PotionEffect(PotionEffectType.FAST_DIGGING, 500, 2);
 
+    /**
+     Strenght ability for diamond sword
+     */
         @EventHandler
         public void onRightSword(PlayerInteractEvent e) {
             Player player = e.getPlayer();
@@ -47,6 +50,10 @@ public class ToolAbilities implements Listener{
             } else e.setCancelled(false);
 
         }
+
+    /**
+     Faster mining ability for diamond pickaxe
+     */
     @EventHandler
     public void onRightPickaxe(PlayerInteractEvent e) {
         Player player = e.getPlayer();
@@ -74,6 +81,10 @@ public class ToolAbilities implements Listener{
         } else e.setCancelled(false);
 
     }
+
+    /**
+     Faster cutting ability for diamond axe
+     */
     @EventHandler
     public void onRightAxe(PlayerInteractEvent e) {
         Player player = e.getPlayer();
@@ -101,6 +112,10 @@ public class ToolAbilities implements Listener{
         } else e.setCancelled(false);
 
     }
+
+    /**
+     Faster mining ability for diamond shovel
+     */
     @EventHandler
     public void onRightShovel(PlayerInteractEvent e) {
         Player player = e.getPlayer();

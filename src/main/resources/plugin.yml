@@ -1,6 +1,6 @@
 name: ModPack
 version: '${project.version}'
-main: me.sk.modpack.ModPack
+main: me.sk.modpack.Main
 api-version: 1.19
 
 commands:
@@ -10,3 +10,9 @@ commands:
     description: heal yourself
   god:
     description: become invulnerable
+  home:
+    description: Warp to location
+  sethome:
+    description: set a warp to location
+  delhome:
+    description: delete the warp

@@ -1,6 +1,6 @@
 package me.sk.modpack.DataManager;
 
-import me.sk.modpack.ModPack;
+import me.sk.modpack.Main;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -12,11 +12,11 @@ import java.util.logging.Level;
 
 public class DataManager {
 
-    private ModPack plugin;
+    private Main plugin;
     private FileConfiguration dataConfig = null;
     private File configFile = null;
 
-    public DataManager(ModPack plugin){
+    public DataManager(Main plugin){
         this.plugin = plugin;
         saveDefaultConfig();
     }
