@@ -1,0 +1,12 @@
+name: ModPack
+version: '${project.version}'
+main: me.sk.modpack.ModPack
+api-version: 1.19
+
+commands:
+  eat:
+    description: Puts players foodbar to max (20)
+  heal:
+    description: heal yourself
+  god:
+    description: become invulnerable
