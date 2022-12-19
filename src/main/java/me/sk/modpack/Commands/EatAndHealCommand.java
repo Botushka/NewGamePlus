@@ -56,7 +56,7 @@ public  class EatAndHealCommand implements CommandExecutor {
                 } else {
                     godPlayers.add(player.getName());
                     player.sendMessage("God mode enabled");
-                    player.setHealth(20);
+                    player.setFoodLevel(20);
                 }
 
             }

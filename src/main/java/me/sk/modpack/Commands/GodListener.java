@@ -26,8 +26,8 @@ public class GodListener implements Listener {
         if (e.getEntity() instanceof Player){
             Player p = (Player) e.getEntity();
             if (EatAndHealCommand.godPlayers.contains(p.getName())){
-                e.isCancelled();
-                e.setFoodLevel(20);
+                e.setCancelled(true);
+                p.setFoodLevel(20);
             }
         }
     }
