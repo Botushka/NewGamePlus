@@ -1,10 +1,11 @@
 package me.sk.modpack;
 import me.sk.modpack.Abilities.ToolAbilities;
 import me.sk.modpack.Commands.EatAndHealCommand;
-import me.sk.modpack.Commands.GodListener;
-import me.sk.modpack.PlayerHomes.delwarp;
-import me.sk.modpack.PlayerHomes.setWarp;
-import me.sk.modpack.PlayerHomes.warp;
+import me.sk.modpack.Listeners.GodListener;
+import me.sk.modpack.Listeners.HarderMobs;
+import me.sk.modpack.Commands.delhome;
+import me.sk.modpack.Commands.home;
+import me.sk.modpack.Commands.setHome;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -14,15 +15,16 @@ public final class Main extends JavaPlugin implements Listener {
     public void onEnable() {
 
         loadConfig();
-        new warp(this);
-        new setWarp(this);
-        new delwarp(this);
+        new home(this);
+        new setHome(this);
+        new delhome(this);
         getCommand("heal").setExecutor(new EatAndHealCommand());
         getCommand("eat").setExecutor(new EatAndHealCommand());
         getCommand("god").setExecutor(new EatAndHealCommand());
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new ToolAbilities(), this);
         getServer().getPluginManager().registerEvents(new GodListener(), this);
+        getServer().getPluginManager().registerEvents(new HarderMobs(), this);
     }
 
     private void loadConfig(){

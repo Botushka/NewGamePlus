@@ -1,4 +1,4 @@
-package me.sk.modpack.PlayerHomes;
+package me.sk.modpack.Commands;
 
 import me.sk.modpack.Main;
 import org.bukkit.Location;
@@ -7,11 +7,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class setWarp implements CommandExecutor {
+public class setHome implements CommandExecutor {
 
     private Main plugin;
 
-    public setWarp(Main plugin){
+    public setHome(Main plugin){
         this.plugin = plugin;
         plugin.getCommand("sethome").setExecutor(this);
     }
@@ -22,10 +22,8 @@ public class setWarp implements CommandExecutor {
             commandSender.sendMessage("Console not allowed to use this command");
             return false;
         }
-        Player p = (Player) commandSender;
-        if (!p.hasPermission("home.sethome")){
-            p.sendMessage("No permission to use this command");
-        }
+       Player p = (Player) commandSender;
+
         if (strings.length == 0){
              p.sendMessage("Give home a specific name");
              return false;

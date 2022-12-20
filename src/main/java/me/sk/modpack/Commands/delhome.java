@@ -1,4 +1,4 @@
-package me.sk.modpack.PlayerHomes;
+package me.sk.modpack.Commands;
 
 import me.sk.modpack.Main;
 import org.bukkit.command.Command;
@@ -6,11 +6,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class delwarp implements CommandExecutor {
+public class delhome implements CommandExecutor {
 
     private Main plugin;
 
-    public delwarp(Main plugin){
+    public delhome(Main plugin){
         this.plugin = plugin;
         plugin.getCommand("delhome").setExecutor(this);
     }
@@ -23,10 +23,7 @@ public class delwarp implements CommandExecutor {
             return false;
         }
         Player p = (Player) commandSender;
-        if(!p.hasPermission("delhome")){
-            p.sendMessage("You don't have permission to use this command!");
-            return false;
-        }
+
         if (strings.length == 0){
             p.sendMessage("Provide name of the home you want to delete!");
             return false;

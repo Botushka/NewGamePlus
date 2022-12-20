@@ -1,4 +1,4 @@
-package me.sk.modpack.PlayerHomes;
+package me.sk.modpack.Commands;
 
 import me.sk.modpack.Main;
 import org.bukkit.Bukkit;
@@ -8,11 +8,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class warp implements CommandExecutor {
+public class home implements CommandExecutor {
 
     private Main plugin;
 
-    public warp(Main plugin){
+    public home(Main plugin){
         this.plugin = plugin;
         plugin.getCommand("home").setExecutor(this);
     }

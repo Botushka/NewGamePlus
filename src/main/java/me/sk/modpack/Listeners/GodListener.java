@@ -1,5 +1,6 @@
-package me.sk.modpack.Commands;
+package me.sk.modpack.Listeners;
 
+import me.sk.modpack.Commands.EatAndHealCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
