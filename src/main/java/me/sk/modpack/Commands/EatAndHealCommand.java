@@ -64,10 +64,12 @@ public  class EatAndHealCommand implements CommandExecutor {
                 if (godPlayers.contains(player.getName())) {
                     godPlayers.remove(player.getName());
                     player.sendMessage("God mode removed");
+                    player.setAllowFlight(false);
                 } else {
                     godPlayers.add(player.getName());
                     player.sendMessage("God mode enabled");
                     player.setFoodLevel(20);
+                    player.setAllowFlight(true);
                 }
 
             }
