@@ -42,7 +42,7 @@ public class ToolAbilities implements Listener{
             } else e.setCancelled(false);
         }
     /**
-     Faster cutting ability for diamond axe
+     Faster cutting ability for diamond axe, pickaxe and shovel
      */
     @EventHandler
     public void onRightSpeed(PlayerInteractEvent e) {

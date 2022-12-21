@@ -1,4 +1,5 @@
 package me.sk.modpack;
+import me.sk.modpack.Abilities.BlockAbilities;
 import me.sk.modpack.Abilities.ToolAbilities;
 import me.sk.modpack.Commands.EatAndHealCommand;
 import me.sk.modpack.Listeners.GodListener;
@@ -25,6 +26,7 @@ public final class Main extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new ToolAbilities(), this);
         getServer().getPluginManager().registerEvents(new GodListener(), this);
         getServer().getPluginManager().registerEvents(new HarderMobs(), this);
+        getServer().getPluginManager().registerEvents(new BlockAbilities(), this);
     }
 
     private void loadConfig(){
